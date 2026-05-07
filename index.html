@@ -53,6 +53,24 @@
       .checklist li {
         margin: 8px 0;
       }
+
+      /* === NEW CSS FIX FOR LINE BREAKS === */
+      /* Preserves formatting and line breaks in chat messages */
+      anam-agent * {
+        white-space: pre-wrap !important; /* Keeps line breaks and wraps text */
+        word-break: break-word !important; /* Breaks long code lines */
+        font-family: "Courier New", monospace !important; /* Monospace for code */
+      }
+
+      /* Optional: Better code block styling */
+      .message-content {
+        background-color: #f5f5f5;
+        padding: 12px;
+        border-radius: 6px;
+        display: block;
+        overflow-x: auto;
+        margin: 8px 0;
+      }
     </style>
   </head>
   <body>
@@ -73,6 +91,7 @@
           </li>
           <li>✓ Type a message and press Enter to send</li>
           <li>✓ AI should respond to your message</li>
+          <li>✓ <strong>NEW:</strong> Code pasting preserves line breaks</li>
         </ul>
       </div>
 
